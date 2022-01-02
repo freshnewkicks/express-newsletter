@@ -13,8 +13,8 @@ mailchimp.setConfig({
     server: "https://us20.admin.mailchimp.com/"
 });
 
-app.get('/', (req,res) => {
-    const mailchimpResponse = mailchimp.ping.get();
+app.get('/', async ( req,res) => {
+    const mailchimpResponse = await mailchimp.ping.get();
     res.write(
         `Response: ${mailchimpResponse}`
     );
