@@ -14,8 +14,9 @@ mailchimp.setConfig({
 });
 
 app.get('/', (req,res) => {
-    (async () => {
-        let response = await mailchimp.ping.get();
-        console.log(response);
-    })();
-})
+    const mailchimpResponse = mailchimp.ping.get();
+    res.write(
+        `Response: ${mailchimpResponse}`
+    );
+    res.send();
+});
