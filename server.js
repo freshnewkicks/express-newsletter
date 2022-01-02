@@ -1,12 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const https = require('https');
+const mailchimp = require('@mailchimp/mailchimp_marketing');
 const app = express();
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Listening on ${process.env.PORT}`);
 });
 
+mailchimp.setConfig({
+    apiKey: "a54125c1484791914ba3ba429d155840-us20",
+    server: "https://us20.admin.mailchimp.com/"
+});
+
 app.get('/', (req,res) => {
-    res.send('Express app on Heroku is operational..')
+    (async () => {
+        let response = await mailchimp.ping.get();
+        console.log(response);
+    })();
 })
