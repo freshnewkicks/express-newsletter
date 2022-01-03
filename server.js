@@ -63,7 +63,6 @@ app.post('/success', (req,res) => {
     });
 
     // call methods on the https request method
-    //
     request.write(jsonData);
     request.end();
 });
