@@ -5,13 +5,13 @@ const axios = require('axios');
 const https = require('https');
 const app = express();
 
-// app.listen(process.env.PORT || 3000, () => {
-//     console.log(`Listening`);
-// });
-
-app.listen(3000, () => {
-    console.log('Local server listening on 3000');
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Listening`);
 });
+
+// app.listen(3000, () => {
+//     console.log('Local server listening on 3000');
+// });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname)); // static method will use the current directory
