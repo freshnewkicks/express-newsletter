@@ -9,9 +9,6 @@ app.listen(process.env.PORT || 3000, () => {
     console.log(`Listening`);
 });
 
-// app.listen(3000, () => {
-//     console.log('Local server listening on 3000');
-// });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname)); // static method will use the current directory
@@ -63,8 +60,7 @@ app.post('/success', (req,res) => {
                 res.sendFile(__dirname + '/failure.html');
             })
         }
-
-    })
+    });
 
     // call methods on the https request method
     //
@@ -72,6 +68,3 @@ app.post('/success', (req,res) => {
     request.end();
 });
 
-
-// List Id
-// 9fe9636f6f
