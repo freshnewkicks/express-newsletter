@@ -12,9 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.72",
+    "axios": "^0.24.0",
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "https": "^1.0.0",
-    "nodemon": "^2.0.15"
+    "mailchimp": "^1.2.1",
+    "nodemon": "^2.0.15",
+    "superagent": "^6.1.0"
   }
 }
