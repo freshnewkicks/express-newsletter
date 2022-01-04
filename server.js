@@ -41,7 +41,7 @@ app.post('/success', (req,res) => {
     const url = `https://us20.api.mailchimp.com/3.0/lists/${listId}`;
     const options = {
         method: "POST",
-        auth: `${membersData.members[0].merge_fields.FNAME}:a54125c1484791914ba3ba429d155840-us20`
+        auth: `${membersData.members[0].merge_fields.FNAME}:APIKEY`
     }
 
     // we want to post data to external resource
